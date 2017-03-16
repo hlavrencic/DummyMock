@@ -31,20 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoPoco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoPoco.1.0.0.0\lib\AutoPoco.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FizzWare.NBuilder, Version=4.0.0.115, Culture=neutral, PublicKeyToken=5651b03e12e42c12, processorArchitecture=MSIL">
-      <HintPath>..\packages\NBuilder.4.0.0\lib\net35\FizzWare.NBuilder.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET35\Moq.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ploeh.AutoFixture, Version=3.50.2.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoFixture.3.50.2\lib\net40\Ploeh.AutoFixture.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -66,9 +54,9 @@
       <Project>{ED3A7C26-CF46-4851-B43E-D5A4A125D9E9}</Project>
       <Name>DummyMock.Dummier</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DummyMock.IDummier\DummyMock.IDummier.csproj">
+    <ProjectReference Include="..\DummyMock.IDummier\DummyMock.Dummier.Contracts.csproj">
       <Project>{BE61A9C3-6CEC-4B34-8468-C8F60AAB2826}</Project>
-      <Name>DummyMock.IDummier</Name>
+      <Name>DummyMock.Dummier.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

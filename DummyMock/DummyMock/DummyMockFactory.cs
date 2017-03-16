@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Linq.Expressions;
+using DummyMock.Dummier.Contracts;
 using Moq;
 
 namespace DummyMock
 {
     public class DummyMockFactory
     {
-        private readonly IDummier.IDummier dummier;
+        private readonly IDummyFactory dummier;
 
-        public DummyMockFactory(IDummier.IDummier dummier)
+        public DummyMockFactory(IDummyFactory dummier)
         {
            this.dummier = dummier;
         }
 
         public DummyMockFactory()
         {
-            this.dummier = new Dummier.Dummier();
+            this.dummier = new Dummier.DummyFactory();
         }
 
         public Mock<T> DummyMock<T>() where T : class

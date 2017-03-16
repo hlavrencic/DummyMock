@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DummyMock.IDummier
+namespace DummyMock.Dummier.Contracts
 {
-    public interface IDummier
+    public interface IDummyFactory
     {
         object CreateDummy(Type type);
     }

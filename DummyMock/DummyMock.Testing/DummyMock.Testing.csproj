@@ -58,7 +58,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DummyMockFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +66,9 @@
       <Project>{ED3A7C26-CF46-4851-B43E-D5A4A125D9E9}</Project>
       <Name>DummyMock.Dummier</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DummyMock.IDummier\DummyMock.IDummier.csproj">
+    <ProjectReference Include="..\DummyMock.IDummier\DummyMock.Dummier.Contracts.csproj">
       <Project>{BE61A9C3-6CEC-4B34-8468-C8F60AAB2826}</Project>
-      <Name>DummyMock.IDummier</Name>
+      <Name>DummyMock.Dummier.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\DummyMock\DummyMock.csproj">
       <Project>{7e145720-ed18-4636-b5cf-3cfa4751cc5e}</Project>

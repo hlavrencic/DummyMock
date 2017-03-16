@@ -7,8 +7,8 @@
     <ProjectGuid>{BE61A9C3-6CEC-4B34-8468-C8F60AAB2826}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DummyMock.IDummier</RootNamespace>
-    <AssemblyName>DummyMock.IDummier</AssemblyName>
+    <RootNamespace>DummyMock.Dummier.Contracts</RootNamespace>
+    <AssemblyName>DummyMock.Dummier.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDummier.cs" />
+    <Compile Include="IDummyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

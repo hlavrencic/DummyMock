@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock", "DummyMock\Dumm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock.Testing", "DummyMock.Testing\DummyMock.Testing.csproj", "{569A0DB6-485F-4AF6-B532-FB891D1D1690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock.IDummier", "DummyMock.IDummier\DummyMock.IDummier.csproj", "{BE61A9C3-6CEC-4B34-8468-C8F60AAB2826}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock.Dummier.Contracts", "DummyMock.IDummier\DummyMock.Dummier.Contracts.csproj", "{BE61A9C3-6CEC-4B34-8468-C8F60AAB2826}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock.Dummier", "DummyMock.Dummier\DummyMock.Dummier.csproj", "{ED3A7C26-CF46-4851-B43E-D5A4A125D9E9}"
 EndProject

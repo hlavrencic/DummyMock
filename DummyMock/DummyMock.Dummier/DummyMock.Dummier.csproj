@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dummier.cs" />
+    <Compile Include="DummyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DummyMock.IDummier\DummyMock.IDummier.csproj">
+    <ProjectReference Include="..\DummyMock.IDummier\DummyMock.Dummier.Contracts.csproj">
       <Project>{BE61A9C3-6CEC-4B34-8468-C8F60AAB2826}</Project>
-      <Name>DummyMock.IDummier</Name>
+      <Name>DummyMock.Dummier.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
