@@ -16,14 +16,21 @@ namespace DummyMock
 
         public DummyMockFactory()
         {
-            this.dummier = new Dummier.DummyFactory();
+            dummier = new Dummier.DummyFactory();
         }
 
         public Mock<T> DummyMock<T>() where T : class
         {
             var dynamicMock = new Mock<T>();
 
-            var typeT = typeof (T);
+            SetupMethodDummies(dynamicMock);
+
+            return dynamicMock;
+        }
+
+        public void SetupMethodDummies<T>(Mock<T> dynamicMock) where T : class
+        {
+            var typeT = typeof(T);
             var tMethods = typeT.GetMethods();
             foreach (var methodInfo in tMethods)
             {
@@ -40,8 +47,6 @@ namespace DummyMock
 
                 dynamicMock.Setup(lambdaExpression).Returns(returnValue);
             }
-
-            return dynamicMock;
         }
     }
 }

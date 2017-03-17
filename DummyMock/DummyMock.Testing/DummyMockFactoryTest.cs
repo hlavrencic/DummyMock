@@ -11,7 +11,10 @@ namespace DummyMock.Testing
             var factory = new DummyMockFactory(new Dummier.DummyFactory());
             var mock = factory.DummyMock<ITestInterface>();
 
+            Assert.IsNotNull(mock.Object.MetodoString());
+            Assert.IsNotNull(mock.Object.MetodoString().Name);
             Assert.AreEqual(mock.Object.MetodoString(), mock.Object.MetodoString());
+            Assert.AreEqual(mock.Object.MetodoString().Name, mock.Object.MetodoString().Name);
         }
 
         [TestMethod]
@@ -26,7 +29,7 @@ namespace DummyMock.Testing
 
     public interface ITestInterface
     {
-        string MetodoString();
+        ValueClass MetodoString();
     }
 
     public class ValueClass
