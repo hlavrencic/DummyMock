@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using DummyMock.Dummier.Contracts;
 using Moq;
 
@@ -34,19 +38,30 @@ namespace DummyMock
             var tMethods = typeT.GetMethods();
             foreach (var methodInfo in tMethods)
             {
-                //Class type
-                var parameter = Expression.Parameter(typeof(T), methodInfo.Name);
-
-                //String rep of property
-                var body = Expression.Call(parameter, methodInfo);
-
-                //build the lambda for the setup method
-                var lambdaExpression = Expression.Lambda<Func<T, object>>(body, parameter);
+                var lambdaExpression = GetSetup<T>(methodInfo);
 
                 var returnValue = dummier.CreateDummy(methodInfo.ReturnType);
-
                 dynamicMock.Setup(lambdaExpression).Returns(returnValue);
             }
+        }
+
+        private Expression<Func<TD, object>> GetSetup<TD>(MethodInfo methodInfo) where TD : class
+        {
+            var objType = typeof(TD);
+
+            var param = Expression.Parameter(objType, objType.Name);
+            var paramss = new[] {param};
+            var paramExpressions = methodInfo.GetParameters().Select(GetParamExpression);
+            var invoke = Expression.Call(param, methodInfo, paramExpressions);
+            var lambda = Expression.Lambda<Func<TD, object>>(invoke, paramss);
+
+            return lambda;
+        }
+
+        private Expression GetParamExpression(ParameterInfo parameterInfo)
+        {
+            var result = Expression.Parameter(parameterInfo.ParameterType, parameterInfo.Name);
+            return result;
         }
     }
 }

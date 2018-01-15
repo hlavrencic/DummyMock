@@ -11,6 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock.Dummier.Contracts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyMock.Dummier", "DummyMock.Dummier\DummyMock.Dummier.csproj", "{ED3A7C26-CF46-4851-B43E-D5A4A125D9E9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NugetConfig", "NugetConfig", "{CC1B35AF-CD03-4E06-BA57-5722E97A3270}"
+	ProjectSection(SolutionItems) = preProject
+		NugetConfig\Debug.nuspec = NugetConfig\Debug.nuspec
+		NugetConfig\Example.nuspec = NugetConfig\Example.nuspec
+		NugetConfig\Release.nuspec = NugetConfig\Release.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

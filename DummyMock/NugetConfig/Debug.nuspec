@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>DummyMockup.Debug</id>
+    <version>1.0.0</version>
+    <authors>bauf_hlavrencic</authors>
+    <owners>bauf_hlavrencic</owners>
+    <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Get mocks with methods that returns dummy objects</description>
+    <releaseNotes>Stater Version</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Moq Mock Dummy AutoFixture</tags>
+    <dependencies>
+		<group targetFramework="net40">
+			<dependency id="Moq" version="4.0.10827" />
+      <dependency id="AutoFixture" version="3.50.2" />
+		</group>
+    </dependencies>
+  </metadata>
+  <files>
+	  <file src="..\DummyMock\bin\Debug\DummyMock.dll" target="lib\net40\DummyMock.dll" />
+	  <file src="..\DummyMock\bin\Debug\DummyMock.pdb" target="lib\net40\DummyMock.pdb" />
+    <file src="..\DummyMock\bin\Debug\DummyMock.Dummier.dll" target="lib\net40\DummyMock.Dummier.dll" />
+    <file src="..\DummyMock\bin\Debug\DummyMock.Dummier.pdb" target="lib\net40\DummyMock.Dummier.pdb" />
+    <file src="..\DummyMock\bin\Debug\DummyMock.Dummier.Contracts.dll" target="lib\net40\DummyMock.Dummier.Contracts.dll" />
+    <file src="..\DummyMock\bin\Debug\DummyMock.Dummier.Contracts.pdb" target="lib\net40\DummyMock.Dummier.Contracts.pdb" />
+  </files>
+</package>
